@@ -7,7 +7,7 @@ O projeto consistirá em uma automação de um sistema de iluminação. O sistem
 ## Tutoriais
 
 ### IoT Device
-O sistema contém uma ESP32 agindo como dispositivo embarcado de IoT relacionado ao sensoriamento e atuação no sistema além de ser capaz de comunicar-se através do protocolo MQTT. Nela estão conectados um sensor de presença do tipo PIR, um sensor de luminosidade e um módulo relé agindo como atuador para ligar e desligar uma lâmpada LED a partir de comandos recebidos. A programação 
+O sistema contém uma ESP32 agindo como dispositivo embarcado de IoT relacionado ao sensoriamento e atuação no sistema além de ser capaz de comunicar-se através do protocolo MQTT. Nela estão conectados um sensor de presença do tipo PIR, um sensor de luminosidade e um módulo relé agindo como atuador para ligar e desligar uma lâmpada LED a partir de comandos recebidos. A programação para este dispositivo foi realizada no ambiente do Arduino IDE e o código é disponibilizado na pasta **src** deste repositório. 
 
 ### IoT Hub
 O sistema
