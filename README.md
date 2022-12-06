@@ -7,11 +7,13 @@ O projeto consistirá em uma automação de um sistema de iluminação. O sistem
 ## Tutoriais
 
 ### IoT Device
-O sistema contém uma ESP32 agindo como dispositivo embarcado de IoT relacionado ao sensoriamento e atuação no sistema além de ser capaz de comunicar-se através do protocolo MQTT. Nela estão conectados um sensor de presença do tipo PIR, um sensor de luminosidade do tipo LDR e um módulo relé agindo como atuador para ligar e desligar uma lâmpada LED a partir de comandos recebidos. A programação para este dispositivo foi realizada no ambiente do Arduino IDE e o código é disponibilizado na pasta *src* deste repositório. Primeiramente, os sensores de presença e luminosidade são conectados às portas GPIO 33 e 35 da ESP32 respectivamente e o modulo relé à porta GPIO 32. No código, são feitas as configurações para conexão WiFi e MQTT, uma função de callback é utilizada para que seja possivel receber, do MQTT broker, informações referentes aos diferentes comando e assim tornar possivel o controle do atuador. Foram configurados 3 tipos de mensagens MQTT que o device IoT pode receber (VON, VOFF e AUT) referentes à comandos por voz e comand automático. 
+O sistema contém uma ESP32 agindo como dispositivo embarcado de IoT relacionado ao sensoriamento e atuação no sistema além de ser capaz de comunicar-se através do protocolo MQTT. Nela estão conectados um sensor de presença do tipo PIR, um sensor de luminosidade do tipo LDR e um módulo relé agindo como atuador para ligar e desligar uma lâmpada LED a partir de comandos recebidos. A programação para este dispositivo foi realizada no ambiente do Arduino IDE e o código é disponibilizado na pasta *src* deste repositório com o nome *script_ESP32.ino*. Primeiramente, os sensores de presença e luminosidade são conectados às portas GPIO 33 e 35 da ESP32 respectivamente e o modulo relé à porta GPIO 32. No código, são feitas as configurações para conexão WiFi e MQTT; uma função de callback é utilizada para que seja possivel receber, do MQTT broker, informações referentes aos diferentes comandos e assim tornar possivel o controle do atuador. Foram configurados 3 tipos de mensagens MQTT que o device IoT pode receber (VON, VOFF e AUT) referentes à comandos por voz e comando automático; dentro do loop principal o programa faz a leitura dos sensores de LDR e PIR e logo em seguida verifica o tipo de controle recebido através da função callback para tomar a decisão de acionar ou não o atuador (acende ou apaga lâmpada) enviando ao broker as leituras realizadas pelos sensores bem como o status da lâmpada naquele momento.
 
 ### IoT Hub
-O sistema
+O sistema contém uma placa Raspberry Pi atuando como MQTT broker do sistema, centralizando as informações enviadas e recebidas pelo IoT Device bem como pelo smatphone também conectado ao sistema via WiFi e protocolo MQTT. A topologia do sistema é mostrada a seguir.
 
+### Smartphone com App Android
+O sistema conta com integração com aplicativo mobile desenvolvido através da plataforma *MIT Inventor*  
 
 ## Vídeo de Apresentação e Demonstrações de Uso
 
