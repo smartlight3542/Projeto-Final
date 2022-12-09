@@ -21,8 +21,20 @@ O sistema contém uma ESP32 agindo como dispositivo embarcado de IoT relacionado
 ### IoT Hub
 O sistema contém uma placa Raspberry Pi atuando como MQTT broker do sistema, centralizando as informações enviadas e recebidas pelo IoT Device bem como pelo smatphone também conectado ao sistema via WiFi e protocolo MQTT. A topologia do sistema é mostrada a seguir.
 
+<div align="center">
+<img src="https://user-images.githubusercontent.com/118867605/206620956-2b8c148e-d971-4348-8da0-c6b8cdb6070a.JPG" width="600px" />
+</div>
+
 ### Smartphone com App Android
-O sistema conta com integração de aplicativo mobile desenvolvido através da plataforma *MIT Inventor* que consegue conectar-se ao *MQTT broker* ao pressionar o botão "Press to Connect" e assim enviar comandos e receber informações relativas às leituras dos sensores. Ao iniciar a tela, o comando do tipo "Automático" é enviado por default fazendo com que o sistema de controle de iluminação seja gerido através das leituras dos sensores e dos valores pré-estipulados em código. Ao pressionar o botão "Press to Speak (command type)" o usuário consegue, através de comando por voz, pelo próprio app, escolher entre controle automático ou comando por voz ao pronunciar as palavras "automático" ou "comando por voz", respectivamente. Caso o comando por voz seja o escolhido, instantaneamente o tipo de controle é alterado pelo sistema e também registrado na tela do aplicativo e, a partir deste momento, ao pressionar o botão "Press to Speak (turn on/turn off)" o usuário consegue escolher entre acender ou apagar a luz no momento desejado, independente da leitura dos sensores ao pronunciar as palavras "acender" ou "apagar" respectivamente, enviando mensagem MQTT para o broker relativo ao comando e alterando o status da lâmpada através do atuador (módulo relé) conectado ao IoT Device (ESP32).   
+O sistema conta com integração de aplicativo mobile desenvolvido através da plataforma *MIT Inventor* que consegue conectar-se ao *MQTT broker* ao pressionar o botão "Press to Connect" e assim enviar comandos e receber informações relativas às leituras dos sensores. Ao iniciar a tela, o comando do tipo "Automático" é enviado por default fazendo com que o sistema de controle de iluminação seja gerido através das leituras dos sensores e dos valores pré-estipulados em código. Ao pressionar o botão "Press to Speak (command type)" o usuário consegue, através de comando por voz, pelo próprio app, escolher entre controle automático ou comando por voz ao pronunciar as palavras "automático" ou "comando por voz", respectivamente. Caso o comando por voz seja o escolhido, instantaneamente o tipo de controle é alterado pelo sistema e também registrado na tela do aplicativo e, a partir deste momento, ao pressionar o botão "Press to Speak (turn on/turn off)" o usuário consegue escolher entre acender ou apagar a luz no momento desejado, independente da leitura dos sensores ao pronunciar as palavras "acender" ou "apagar" respectivamente, enviando mensagem MQTT para o broker relativo ao comando e alterando o status da lâmpada através do atuador (módulo relé) conectado ao IoT Device (ESP32). Abaixo são mostradas as imagens capturas no ambiente *MIT Inventor* que mostram o design e a programação em blocos utilizada.  
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/118867605/206621093-391651a9-ac3a-4d3b-a89f-ee2d6a92ffcd.JPG" width="800px" />
+</div>
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/118867605/206621499-92ce9b47-bad7-4f91-afe8-d5c44690bb79.JPG" width="800px" />
+</div>
 
 ## Conexões físicas do sistema
 Abaixo é apresentada imagem que ilusta as conexões físicas do circuito utilizado feitas no ambiente do Frietzing
