@@ -37,7 +37,11 @@ O sistema conta com integração de aplicativo mobile desenvolvido através da p
 </div>
 
 ## Conexões físicas do sistema
-Abaixo é apresentada imagem que ilusta as conexões físicas do circuito utilizado feitas no ambiente do Frietzing
+Abaixo é apresentada imagem que ilusta as conexões físicas do circuito utilizado capturada no ambiente do *Frietzing*
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/118867605/206621820-3ade1e57-c67d-4035-be17-0cf260a657c3.JPG" width="800px" />
+</div>
 
 
 
