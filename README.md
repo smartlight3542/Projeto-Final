@@ -25,7 +25,15 @@ O sistema contém uma placa Raspberry Pi atuando como MQTT broker do sistema, ce
 <img src="https://user-images.githubusercontent.com/118867605/206620956-2b8c148e-d971-4348-8da0-c6b8cdb6070a.JPG" width="600px" />
 </div>
 
-Para o desenvolvimento de dashboard rodando no IoT Hub, foi utilizado o ambiente do *Node-Red*, as imagens contendo o fluxo utilizado bem como o dashboard são mostradas a seguir, os arquivos referentes estão alocados na pasta **src**
+Para o desenvolvimento de dashboard rodando no IoT Hub, foi utilizado o ambiente do *Node-Red*, as imagens contendo o fluxo utilizado bem como o dashboard são mostradas a seguir, os arquivos referentes estão alocados na pasta **src**.
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/118867605/207210070-4745a1c6-7e8a-4cdd-829d-46f57e3675e2.PNG" width="600px" />
+</div>
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/118867605/207210294-f466c46c-79c4-49ab-8e00-b142c9bc1547.JPG" width="250px" />
+</div>
 
 ### Smartphone com App Android
 O sistema conta com integração de aplicativo mobile desenvolvido através da plataforma *MIT Inventor* que consegue conectar-se ao *MQTT broker* ao pressionar o botão "Press to Connect" e assim enviar comandos e receber informações relativas às leituras dos sensores. Ao iniciar a tela, o comando do tipo "Automático" é enviado por default fazendo com que o sistema de controle de iluminação seja gerido através das leituras dos sensores e dos valores pré-estipulados em código. Ao pressionar o botão "Press to Speak (command type)" o usuário consegue, através de comando por voz, pelo próprio app, escolher entre controle automático ou comando por voz ao pronunciar as palavras "automático" ou "comando por voz", respectivamente. Caso o comando por voz seja o escolhido, instantaneamente o tipo de controle é alterado pelo sistema e também registrado na tela do aplicativo e, a partir deste momento, ao pressionar o botão "Press to Speak (turn on/turn off)" o usuário consegue escolher entre acender ou apagar a luz no momento desejado, independente da leitura dos sensores ao pronunciar as palavras "acender" ou "apagar" respectivamente, enviando mensagem MQTT para o broker relativo ao comando e alterando o status da lâmpada através do atuador (módulo relé) conectado ao IoT Device (ESP32). Abaixo são mostradas as imagens capturas no ambiente *MIT Inventor* que mostram o design e a programação em blocos utilizada.  
